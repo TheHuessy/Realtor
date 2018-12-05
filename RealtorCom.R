@@ -66,8 +66,8 @@ realtor <- data.frame("Address" = as.character(),
 )
 
 
-#for (i in 1:length(zips)){
-for(i in 1){
+for (i in 1:length(zips)){
+#for(i in 1){
   #First page to find out max pages
   
   ####
@@ -478,9 +478,9 @@ for(i in 1){
 } #END ZIPS FOR LOOP
 
 realtor <- unique(realtor)
-#r.curs <- read.csv("H:/My Documents/Short Term Rental Scraper/Outputs/Realtor.csv", stringsAsFactors = FALSE)
-#rnew <- rbind(r.curs, realtor)
 
-write_civis(rnew, tablename = "sandbox.realtor_master", if_exists = "append")
-write.csv(rnew, "H:/My Documents/Short Term Rental Scraper/Outputs/Realtor.csv", row.names = FALSE)
+write_civis(realtor, tablename = "sandbox.realtor_master", if_exists = "append")
+write_civis(realtor, tablename = "sandbox.realtor_daily", if_exists = "drop")
+
+
 
