@@ -479,8 +479,12 @@ for (i in 1:length(zips)){
 
 realtor <- unique(realtor)
 
+<<<<<<< HEAD
 write_civis(realtor, tablename = "sandbox.realtor_master", if_exists = "append")
 write_civis(realtor, tablename = "sandbox.realtor_daily", if_exists = "drop")
 
+=======
+write_civis(rnew, tablename = "sandbox.realtor_master", if_exists = "append")
+>>>>>>> 6c42762ca858b502023919fce7d4050fd018fc18
 
 
