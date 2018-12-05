@@ -67,7 +67,7 @@ realtor <- data.frame("Address" = as.character(),
 
 
 for (i in 1:length(zips)){
-#for(i in 1){
+#for(i in 2){
   #First page to find out max pages
   
   ####
@@ -128,6 +128,7 @@ for (i in 1:length(zips)){
     html_attr("data-url") %>%
     paste("https://www.realtor.com", ., sep = "")
   
+  if(length(maxp) > 0){
   if(maxp > 1){
     print(paste("RUNNING PAGES"))
     for (t in 2:maxp){
@@ -177,7 +178,7 @@ for (i in 1:length(zips)){
     } #END ZIP MULTIPLE LANDING PAGE PULLS
     print(paste("FOUND", length(plk), "LISTINGS FOR ZIP", zips[i]))
   } #END IF STATEMENT FOR ZIPS WITH MORE THAN 1 PAGE
-  
+  } #END if statement for maxp's length being more than 0
   #Extract link data
   
   ####
