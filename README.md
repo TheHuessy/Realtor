@@ -1,2 +1,2 @@
 # Realtor
-Civis ready craper for Realtor.com
+Civis ready scraper for Realtor.com
