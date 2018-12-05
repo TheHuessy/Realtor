@@ -218,7 +218,7 @@ for (i in 1:length(zips)){
     #Check for .ldp-detail-rental-floorplans %>% list-floorplans
     #if it's there, then there are a few units with data
     #run a for loop for each of the nodes that come up
-    #Do this run AFTER you already pull the description and other non-unit specific data
+
     flch <- lizt %>% 
       html_nodes("#ldp-detail-rental-floorplans") %>% 
       html_nodes(".list-floorplans")
